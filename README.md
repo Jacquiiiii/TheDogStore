@@ -14,7 +14,7 @@ Front-end:
 Back-end:
 - Node JS
 - Express
-- SQlite
+- PostgreSQL
 - Sequelize
 
 Testing:
@@ -26,16 +26,22 @@ CI/CD Pipeline:
 
 ## Getting started:
 - Clone this repository
-- `npm install`
+- Install dependencies: `npm install`
+- Set up the database:
+  - `CREATE DATABASE database_name;`
+  - `CREATE USER user WITH PASSWORD 'password';`
 - Run the migration scripts and seed the database:
   - `npx sequelize-cli db:migrate`
   - `npx sequelize-cli db:seed:all`
-- Create a .env file and add the following: `SECRET=add_your_custom_secret_here`
+- Create a .env file (refer to .envExample for template)
 
-## To run the app:
+## Running the app:
 - `npm run backend`
 - `npm start`
 
-## Unit tests:
+## Running unit tests:
 - Run front-end tests: `npm run test`
 - Run back-end tests: `npm run test:backend`
+
+## Accessing psql (wsl users):
+- `sudo -u postgres psql database_name`

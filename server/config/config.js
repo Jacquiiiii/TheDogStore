@@ -1,18 +1,17 @@
-const path = require('path')
-const storage = path.join(__dirname, '../../dogstore.sqlite')
+require('dotenv').config()
 
 module.exports = {
   development: {
-    dialect: 'sqlite',
-    storage
-  },
-  test: {
-    dialect: 'sqlite',
-    storage: ':memory'
+    dialect: 'postgres',
+    username: process.env.PG_USER,
+    password: process.env.PG_PASSWORD,
+    database: process.env.PG_DATABASE,
+    host: 'localhost',
+    port: 5432,
   },
   production: {
-    use_env_variable: 'DB_CONNECTION_STRING',
+    use_env_variable: process.env.DB_CONNECTION_STRING,
     dialect: 'postgres',
-    logging: false
-  }
+    logging: false,
+  },
 }

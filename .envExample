@@ -1,0 +1,7 @@
+PG_DATABASE="insert_database"
+PG_USER="insert_user"
+PG_PASSWORD="insert_password"
+
+DB_CONNECTION_STRING="insert_db_connection_string"
+
+SECRET="insert_custom_jwt_secret_here"
