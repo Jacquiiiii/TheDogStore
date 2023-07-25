@@ -8,7 +8,7 @@ on:
     branches: [main]
 
 jobs:
-  build-test:
+  Build-Test:
     runs-on: ubuntu-latest
     env:
       DB_URL: ${{ secrets.DB_URL }}
@@ -28,7 +28,7 @@ jobs:
         run: npm run unit
 
   Deploy-Production:
-    needs: build-test
+    needs: Build-Test
     runs-on: ubuntu-latest
     env:
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
