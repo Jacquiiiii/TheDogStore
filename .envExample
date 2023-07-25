@@ -1,3 +1,5 @@
+NODE_ENV="development"
+
 PG_DATABASE="insert_database"
 PG_USER="insert_user"
 PG_PASSWORD="insert_password"
