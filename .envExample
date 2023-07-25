@@ -1,7 +1,10 @@
+NODE_ENV="development"
+
 PG_DATABASE="insert_database"
 PG_USER="insert_user"
 PG_PASSWORD="insert_password"
 
-DB_CONNECTION_STRING="insert_db_connection_string"
+TEST_DB_URL="postgresql://username:password@host:port/database"
+DB_URL="postgresql://username:password@host:port/database"
 
 SECRET="insert_custom_jwt_secret_here"
