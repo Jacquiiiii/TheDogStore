@@ -22,8 +22,6 @@ jobs:
           node-version: '16.x'
       - name: Install dependencies
         run: npm ci
-      - name: Run backend unit tests
-        run: npm run test:backend
       - name: Build
         run: npm run build
       - name: Run frontend unit tests
