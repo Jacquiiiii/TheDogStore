@@ -13,6 +13,7 @@ jobs:
     env:
       DB_URL: ${{ secrets.DB_URL }}
       TEST_DB_URL: ${{ secrets.TEST_DB_URL }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -30,3 +31,15 @@ jobs:
 
       - name: Run frontend unit tests
         run: npm run unit
+
+      - name: Deploy to Vercel
+        run: |
+          npm install -g vercel
+          vercel --token $VERCEL_TOKEN --prod
+
+      # Create preview deployments for pull requests
+      - name: Create Vercel Preview Deployment
+        if: github.event_name == 'pull_request'
+        run: |
+          npm install -g vercel
+          vercel --token $VERCEL_TOKEN --edge
