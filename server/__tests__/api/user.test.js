@@ -53,9 +53,11 @@ describe('User Routes', () => {
   })
 })
 
-afterAll(() => {
-  return new Promise((resolve) => {
-    db.sequelize.close()
+afterAll(async () => {
+  await db.User.destroy({ where: {} })
+  await db.sequelize.close()
+
+  await new Promise((resolve) => {
     server.close(resolve)
   })
 })

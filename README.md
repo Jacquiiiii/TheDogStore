@@ -30,9 +30,15 @@ CI/CD Pipeline:
 - Set up the database:
   - `CREATE DATABASE database_name;`
   - `CREATE USER user WITH PASSWORD 'password';`
+- Set up the test database:
+  - `CREATE DATABASE database_name;`
+  - `CREATE USER user WITH PASSWORD 'password';`
 - Run the migration scripts and seed the database:
   - `npx sequelize-cli db:migrate`
   - `npx sequelize-cli db:seed:all`
+- Run the migration scripts and seed the test database:
+  - `npx sequelize-cli db:migrate --env test`
+  - `npx sequelize-cli db:seed:all --env test`
 - Create a .env file (refer to .envExample for template)
 
 ## Running the app:

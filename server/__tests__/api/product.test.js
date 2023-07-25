@@ -57,6 +57,9 @@ describe('Product Routes', () => {
 
 afterAll(async () => {
   await db.Product.destroy({ where: {} })
-  db.sequelize.close()
-  server.close()
+  await db.sequelize.close()
+
+  await new Promise((resolve) => {
+    server.close(resolve)
+  })
 })
