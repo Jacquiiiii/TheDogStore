@@ -10,6 +10,9 @@ on:
 jobs:
   build-test:
     runs-on: ubuntu-latest
+    env:
+      DB_URL: ${{ secrets.DB_URL }}
+      TEST_DB_URL: ${{ secrets.TEST_DB_URL }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
