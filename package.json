@@ -44,7 +44,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --coverage --watchAll",
     "unit": "react-scripts test",
-    "test:backend": "jest server/**/**/*.test.js --detectOpenHandles",
+    "test:backend": "jest server/**/**/*.test.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

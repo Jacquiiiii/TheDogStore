@@ -59,6 +59,5 @@ afterAll(async () => {
 
   await new Promise((resolve) => {
     server.close(resolve)
-    console.log('app is closed')
   })
 })
