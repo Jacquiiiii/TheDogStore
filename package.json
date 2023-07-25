@@ -2,7 +2,6 @@
   "name": "dog-store",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Jacquiiii.github.io/dog-store",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",

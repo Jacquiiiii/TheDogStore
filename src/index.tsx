@@ -19,7 +19,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/dog-store">
+    <BrowserRouter>
       <Provider store={store} data-testid="provider">
         <PersistGate loading={null} persistor={persistor}>
           <App />
