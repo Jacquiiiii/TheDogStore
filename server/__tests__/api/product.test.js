@@ -1,7 +1,7 @@
 const request = require('supertest')
 const express = require('express')
 const cors = require('cors')
-const port = 3000
+const port = 8000
 const db = require('../../models/index')
 const app = express()
 
