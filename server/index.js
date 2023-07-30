@@ -23,3 +23,5 @@ app.use('/products', productRoutes)
 app.use('/users', userRoutes)
 
 app.listen(port, () => console.log(`app is listening on port ${port}`))
+
+module.exports = app
