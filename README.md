@@ -2,8 +2,6 @@
 
 The Dog Store is a mock e-commerce application that sells dog supplies. This project was intended for development practice only. 
 
-[⭐ Deployed on Vercel]("https://the-dog-store.vercel.app/")
-
 ## Tech stack:
 
 Front-end:
@@ -25,7 +23,6 @@ Testing:
 
 CI/CD:
 - GitHub Actions
-- Vercel
 
 ## Getting started:
 - Clone this repository
