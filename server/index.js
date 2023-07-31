@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const db = require('./models')
+const path = require('path')
 const port = process.env.PORT || 54321
 
 app.use(cors())
@@ -21,6 +22,8 @@ const userRoutes = require('./routes/userRoutes')
 
 app.use('/products', productRoutes)
 app.use('/users', userRoutes)
+
+app.use(express.static(path.join(__dirname, '../build')))
 
 app.listen(port, () => console.log(`app is listening on port ${port}`))
 
