@@ -1,1 +1,1 @@
-web: npm install && npm run backend
+web: npm run build && npm install && npm run backend
