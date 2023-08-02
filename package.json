@@ -43,11 +43,12 @@
     "dev": "NODE_ENV=development react-scripts start",
     "backend": "NODE_ENV=production node server/index.js",
     "backend:dev": "NODE_ENV=development node server/index.js",
-    "build": "NODE_ENV=production react-scripts build",
+    "build": "NODE_ENV=production react-scripts build && npm run copy:build",
     "test": "react-scripts test --coverage --watchAll",
     "unit": "react-scripts test",
     "test:backend": "NODE_ENV=test jest server/**/**/*.test.js --detectOpenHandles",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "copy:build": "node ./copyBuild.js"
   },
   "eslintConfig": {
     "extends": [
