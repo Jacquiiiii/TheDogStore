@@ -3,6 +3,7 @@ const cors = require('cors')
 const app = express()
 const db = require('./models')
 const path = require('path')
+const fs = require('fs')
 const port = process.env.PORT || 54321
 const BUILD_PATH = path.resolve('./public')
 
