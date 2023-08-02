@@ -1,6 +1,7 @@
 {
   "name": "dog-store",
   "version": "0.1.0",
+  "homepage": "https://dog-store-2707e4902db3.herokuapp.com/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
