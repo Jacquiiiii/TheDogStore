@@ -17,6 +17,19 @@ db.sequelize.sync().then(function () {
   console.log(err)
 })
 
+app.get('/', (req, res) => {
+  filePath = BUILD_PATH + '/index.html'
+
+  if (fs.existsSync(filePath)) {
+    res.sendFile(filePath)
+  }
+  else {
+    res.statusCode = 404
+    res.write('404 not found')
+    res.end()
+  }
+})
+
 const productRoutes = require('./routes/productRoutes')
 const userRoutes = require('./routes/userRoutes')
 

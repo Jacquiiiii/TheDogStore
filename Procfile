@@ -1,1 +1,1 @@
-web: npm run build && npm install && npm run backend
+web: node server/index.js
