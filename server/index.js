@@ -25,6 +25,10 @@ app.use('/users', userRoutes)
 
 app.use(express.static(path.join(__dirname, '../build')))
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build/index.html'))
+})
+
 app.listen(port, () => console.log(`app is listening on port ${port}`))
 
 module.exports = app

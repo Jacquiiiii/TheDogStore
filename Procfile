@@ -1,2 +1,1 @@
-web: npm run backend
-client: npm start
+web: node server/index.js
