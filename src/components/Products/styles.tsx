@@ -1,7 +1,4 @@
-// External imports
 import { Link } from 'react-router-dom'
-
-// Styling
 import styled from 'styled-components'
 
 const ProductsContainer = styled.div`

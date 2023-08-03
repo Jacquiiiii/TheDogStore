@@ -1,18 +1,13 @@
-// External imports
 import { fireEvent, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import userEvent from '@testing-library/user-event'
-import { act } from 'react-dom/test-utils' // Import act
-
-// Components
-import Header from '../Header'
-
-// Store & Slices
+import { act } from 'react-dom/test-utils'
 import { renderWithProviders } from '../../../utils/utils-for-tests'
 import { logoutSuccess, setUserId } from '../../../store/slices/loginSlice'
 import { clearCart } from '../../../store/slices/cartSlice'
 
-// Mocks
+import Header from '../Header'
+
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),
   useDispatch: jest.fn()

@@ -1,15 +1,9 @@
-// Components
+import { useGetProductsByCategoryQuery } from '../../store/slices/productsApiSlice'
+import { Product, ProductsResponse } from '../../types/types'
+import { ProductsContainer, Header } from './styles'
+
 import ProductCard from './ProductCard'
 import ProductLinks from './ProductLinks'
-
-// Store & Slices
-import { useGetProductsByCategoryQuery } from '../../store/slices/productsApiSlice'
-
-// Types
-import { Product, ProductsResponse } from '../../types/types'
-
-// Styling
-import { ProductsContainer, Header } from './styles'
 
 const Food = () => {
   const { data: products, error, isLoading } = useGetProductsByCategoryQuery('Food')

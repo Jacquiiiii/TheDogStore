@@ -1,15 +1,9 @@
-// External imports
 import { useGetProductsByCategoryQuery } from '../../store/slices/productsApiSlice'
+import { Product, ProductsResponse } from '../../types/types'
+import { ProductsContainer, Header } from './styles'
 
-// Components
 import ProductCard from './ProductCard'
 import ProductLinks from './ProductLinks'
-
-// Types
-import { Product, ProductsResponse } from '../../types/types'
-
-// Styling
-import { ProductsContainer, Header } from './styles'
 
 const Supplies = () => {
   const { data: products, error, isLoading } = useGetProductsByCategoryQuery('Supplies')

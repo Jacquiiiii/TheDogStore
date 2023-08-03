@@ -1,11 +1,6 @@
-// External imports
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
-// Store & Slices
 import { useAddUserMutation } from '../../store/slices/usersApiSlice'
-
-// Styling
 import { RegisterContainer, ButtonContainer, RegisterButton, LoginButton } from './styles'
 
 const Register = () => {

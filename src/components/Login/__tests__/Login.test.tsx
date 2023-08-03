@@ -1,18 +1,13 @@
-// External imports
 import { render, screen, act, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
-
-// Components
-import Login from '../Login'
-
-// Store & Slices
 import { store } from '../../../store/store'
 import { useFindUserMutation } from '../../../store/slices/usersApiSlice'
 import { loginSuccess, setUserId } from '../../../store/slices/loginSlice'
 
-// Mocks
+import Login from '../Login'
+
 jest.mock('../../../store/slices/usersApiSlice')
 jest.mock('../../../store/store')
 jest.mock('react-redux', () => ({

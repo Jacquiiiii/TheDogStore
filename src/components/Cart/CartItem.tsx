@@ -1,13 +1,6 @@
-// External imports
 import { useDispatch } from 'react-redux'
-
-// Store & Slices
 import { removeItemFromCart } from '../../store/slices/cartSlice'
-
-// Types
 import { ProductProps } from '../../types/types'
-
-// Styling
 import { CartItemContainer } from './styles'
 
 const CartItem = (props: ProductProps) => {

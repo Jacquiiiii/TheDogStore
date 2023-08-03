@@ -1,13 +1,8 @@
-// External imports
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-
-// Store & Slices
 import { RootState } from '../../store/store'
 import { logoutSuccess, setUserId } from '../../store/slices/loginSlice'
 import { clearCart } from '../../store/slices/cartSlice'
-
-// Styles
 import { HeaderContainer, NavLink } from './styles'
 
 const Header = () => {

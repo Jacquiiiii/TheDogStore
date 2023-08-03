@@ -1,19 +1,12 @@
-// External imports
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { render, screen, waitFor } from '@testing-library/react'
-
-// Components
-import Toys from '../Toys'
-
-// Store & Slices
 import { store } from '../../../store/store'
 import { useGetProductsByCategoryQuery } from '../../../store/slices/productsApiSlice'
-
-// Data
 import { toysData } from '../../../__mocks__/data/productsData'
 
-// Mocks
+import Toys from '../Toys'
+
 jest.mock('../../../store/slices/productsApiSlice')
 jest.mock('../../../store/store')
 

@@ -1,15 +1,10 @@
-// External imports
 import { fireEvent, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
-
-// Components
-import CartItem from '../CartItem'
-
-// Store & Slices
 import { renderWithProviders } from '../../../utils/utils-for-tests'
 import { removeItemFromCart } from '../../../store/slices/cartSlice'
 
-// Mocks
+import CartItem from '../CartItem'
+
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),
   useDispatch: jest.fn()

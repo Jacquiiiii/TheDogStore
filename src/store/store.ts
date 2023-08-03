@@ -1,16 +1,12 @@
-// External imports
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-
-// Slices
 import cartReducer from './slices/cartSlice'
 import loginReducer from './slices/loginSlice'
 import { productsAPI } from './slices/productsApiSlice'
 import { usersAPI } from './slices/usersApiSlice'
 
-// Config for persisting login state on refresh
 const persistConfig = { key: 'root', storage}
 const persistedLoginReducer = persistReducer(persistConfig, loginReducer)
 
@@ -32,6 +28,5 @@ setupListeners(store.dispatch)
 const persistor = persistStore(store)
 
 export type RootState = ReturnType<typeof store.getState>
-
 export { store, persistor }
 

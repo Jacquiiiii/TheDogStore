@@ -1,4 +1,3 @@
-// Styles
 import { RewardsContainer, MemberCard, Coupons } from "./styles"
 
 const Rewards = () => {

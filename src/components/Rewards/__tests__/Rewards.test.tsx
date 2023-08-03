@@ -1,7 +1,5 @@
-// External imports
 import { render } from '@testing-library/react'
 
-// Components
 import Rewards from '../Rewards'
 
 describe('Rewards', () => {

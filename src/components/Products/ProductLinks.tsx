@@ -1,4 +1,3 @@
-// Styling
 import { LinkContainer, NavLink } from './styles'
 
 const ProductLinks = () => {

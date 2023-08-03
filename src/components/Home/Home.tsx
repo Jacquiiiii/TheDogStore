@@ -1,7 +1,4 @@
-// External imports
 import { useState } from 'react'
-
-// Styling
 import { HomeContainer } from './styles'
 
 const Home = () => {

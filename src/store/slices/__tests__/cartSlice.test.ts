@@ -1,12 +1,9 @@
-// Slices
+import { CartItemObj } from '../../../types/types'
 import cartReducer, {
   addItemToCart,
   removeItemFromCart,
   clearCart,
 } from '../cartSlice'
-
-// Types
-import { CartItemObj } from '../../../types/types'
 
 describe('cartSlice', () => {
   beforeEach(() => {

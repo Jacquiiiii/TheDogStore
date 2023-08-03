@@ -1,7 +1,4 @@
-// Constants
 import { dog1, dog2, dog3 } from '../../constants/constants'
-
-// Styling
 import { AboutContainer, ImageContainer } from './styles'
 
 const About = () => {

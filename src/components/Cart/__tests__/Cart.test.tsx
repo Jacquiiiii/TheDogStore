@@ -1,15 +1,9 @@
-// External imports
 import { screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
-
-// Components
-import Cart from '../Cart'
-
-// Store & Slices
 import { renderWithProviders } from '../../../utils/utils-for-tests'
-
-// Data
 import { cartData } from '../../../__mocks__/data/cartData'
+
+import Cart from '../Cart'
 
 describe('Cart', () => {
   it('renders the my cart text', () => {

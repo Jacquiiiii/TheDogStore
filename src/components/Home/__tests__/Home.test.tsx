@@ -1,7 +1,5 @@
-// External imports
 import { render, fireEvent } from '@testing-library/react'
 
-// Components
 import Home from '../Home'
 
 describe('Home', () => {

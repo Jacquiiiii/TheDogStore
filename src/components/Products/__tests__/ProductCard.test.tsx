@@ -1,16 +1,11 @@
-// External imports
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { fireEvent, render, screen } from '@testing-library/react'
-
-// Components
-import ProductCard from '../ProductCard'
-
-// Store & Slices
 import { store } from '../../../store/store'
 import { addItemToCart } from '../../../store/slices/cartSlice'
 
-// Mocks
+import ProductCard from '../ProductCard'
+
 jest.mock('../../../store/store')
 jest.mock('../../../store/slices/productsApiSlice')
 jest.mock('react-redux', () => ({

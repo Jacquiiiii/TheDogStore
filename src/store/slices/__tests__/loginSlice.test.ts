@@ -1,4 +1,3 @@
-// Slices
 import { loginSlice } from '../loginSlice'
 
 describe('login slice', () => {

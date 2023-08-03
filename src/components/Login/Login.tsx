@@ -1,13 +1,8 @@
-// External imports
 import { useState } from "react"
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-
-// Store & Slices
 import { loginSuccess, setUserId } from '../../store/slices/loginSlice'
 import { useFindUserMutation } from '../../store/slices/usersApiSlice'
-
-// Styling
 import { LoginContainer, ButtonContainer, LoginButton, RegisterButton } from './styles'
 
 const Login = () => {

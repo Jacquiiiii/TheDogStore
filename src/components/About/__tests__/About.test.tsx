@@ -1,11 +1,7 @@
-// External imports
 import { screen } from '@testing-library/react'
-
-// Components
-import About from '../About'
-
-// Store & Slices
 import { renderWithProviders } from '../../../utils/utils-for-tests'
+
+import About from '../About'
 
 describe('About', () => {
   beforeEach(() => {
