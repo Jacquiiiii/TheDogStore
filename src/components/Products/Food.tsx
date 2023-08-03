@@ -1,9 +1,9 @@
+import useProductsByCategory from '../../hooks/useProductsByCategory'
 import { Product } from '../../types/types'
 import { ProductsContainer, Header } from './styles'
 
 import ProductCard from './ProductCard'
 import ProductLinks from './ProductLinks'
-import useProductsByCategory from '../../hooks/useProductsByCategory'
 
 const Food = () => {
   const { productsData, data: products, error, isLoading } = useProductsByCategory('Food')
@@ -29,9 +29,11 @@ const Food = () => {
       <ProductLinks />
       <Header>Food</Header>
       <ProductsContainer data-testid="products-container">
-        {productsData && products.productsByCategory.map((product: Product) => (
-          <ProductCard product={product} key={product.id}/>
-        ))}
+        {productsData &&
+          products.productsByCategory.map((product: Product) => (
+            <ProductCard product={product} key={product.id} />
+          ))
+        }
         {!productsData &&
           <div data-testid="no-products">Unfortunately there are no products at this time. Please check back at a later date.</div>
         }

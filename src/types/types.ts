@@ -1,3 +1,4 @@
+// Product types
 export interface Product {
   id: number;
   name: string;
@@ -8,6 +9,15 @@ export interface Product {
   category: string;
 }
 
+export interface ProductProps {
+  product: Product;
+}
+
+export type ProductsResponse = {
+  productsData: Product[]
+}
+
+// Cart types
 export interface CartItemObj {
   id: number
   name: string
@@ -18,14 +28,7 @@ export interface CartItemObj {
   category: string
 }
 
-export interface ProductProps {
-  product: Product;
-}
-
-export type ProductsResponse = {
-  productsData: Product[]
-}
-
+// Theme types (TODO: Add theme into app)
 export type Theme = "light" | "dark"
 
 export interface ThemeContextType {
