@@ -17,11 +17,12 @@ Back-end:
 - Node JS
 - Express
 - PostgreSQL
-- Sequelize
+- Sequelize as ORM
 
 Testing:
 - React testing library
 - Jest
+- Coming soon: Cypress
 
 CI/CD:
 - GitHub Actions
@@ -29,19 +30,19 @@ CI/CD:
 ## Getting started:
 - Clone this repository
 - Install dependencies: `npm install`
-- Set up the database:
+- Set up a development PostgreSQL database:
   - `CREATE DATABASE database_name;`
   - `CREATE USER user WITH PASSWORD 'password';`
-- Set up the test database:
+- Set up the test PostgreSQL database:
   - `CREATE DATABASE database_name;`
   - `CREATE USER user WITH PASSWORD 'password';`
-- Run the migration scripts and seed the database:
+- Run the migration scripts and seed the development database:
   - `npx sequelize-cli db:migrate`
   - `npx sequelize-cli db:seed:all`
 - Run the migration scripts and seed the test database:
   - `npx sequelize-cli db:migrate --env test`
   - `npx sequelize-cli db:seed:all --env test`
-- Create a .env file (refer to .envExample for template)
+- Create a .env file and add relevant secrets (refer to .env.example for template)
 
 ## Running the app in development:
 - `npm run backend:dev`
