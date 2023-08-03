@@ -1,12 +1,12 @@
-import { useGetProductsByCategoryQuery } from '../../store/slices/productsApiSlice'
-import { Product, ProductsResponse } from '../../types/types'
+import { Product } from '../../types/types'
 import { ProductsContainer, Header } from './styles'
 
 import ProductCard from './ProductCard'
 import ProductLinks from './ProductLinks'
+import useProductsByCategory from '../../hooks/useProductsByCategory'
 
 const Food = () => {
-  const { data: products, error, isLoading } = useGetProductsByCategoryQuery('Food')
+  const { productsData, data: products, error, isLoading } = useProductsByCategory('Food')
 
   if (isLoading) {
     return (
@@ -23,9 +23,6 @@ const Food = () => {
       </ProductsContainer>
     )
   }
-  // Defines types for product.productsData and if not undefined, assign value of products to productsData. This is used to render products on the page if any exist.
-  let productsData: ProductsResponse | undefined
-  if (products.productsByCategory) productsData = products
 
   return (
     <>
