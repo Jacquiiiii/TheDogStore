@@ -9,14 +9,11 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-// Routes
 const userRoutes = require('../../routes/userRoutes')
 app.use('/users', userRoutes)
 
-// Start server
 const server = app.listen(port, () => console.log(`app is listening on port ${port}`))
 
-// Mock data
 const userData = require('../../__mocks__/userData')
 
 beforeAll(async () => {

@@ -25,7 +25,6 @@ export const user1Data = {
   "password": "password123"
 }
 
-
 export const user2Data = {
   "id": 2,
   "first_name": "Jane",
