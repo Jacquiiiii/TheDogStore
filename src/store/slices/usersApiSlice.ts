@@ -1,10 +1,12 @@
 //External imports
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
+const baseUrl = process.env.REACT_APP_ENV === 'production' ? '/' : 'http://localhost:54321/'
+
 // Creates API queries that can be used to fetch data from /users endpoints
 export const usersAPI = createApi({
   reducerPath: 'usersApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:54321/' }),
+  baseQuery: fetchBaseQuery({ baseUrl }),
   endpoints: (builder) => ({
     getAllUsers: builder.query({ query: () => 'users' }),
     getUserByEmail: builder.query({ query: (email) => ({ 
