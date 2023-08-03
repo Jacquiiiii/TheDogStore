@@ -1,6 +1,8 @@
 # 🐶 The Dog Store 🐶
 
-The Dog Store is a mock e-commerce application that sells dog supplies. This project was intended for development practice only. 
+The Dog Store is a mock e-commerce application that sells dog supplies. This project was intended for development practice only.
+
+Deployed on [Heroku](https://dog-store-2707e4902db3.herokuapp.com/)
 
 ## Tech stack:
 
