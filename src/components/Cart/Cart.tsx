@@ -1,20 +1,11 @@
-import { useSelector } from 'react-redux'
-import { RootState } from '../../store/store'
 import { Product } from '../../types/types'
 import { CartContainer, CartItemsList, ProductsLink, TotalContainer, Header } from './styles'
+import useCart from '../../hooks/useCart'
 
 import CartItem from './CartItem'
 
 const Cart = () => {
-  const cartItems = useSelector((state: RootState) => state.cart)
-
-  const calculateTotal = (cartItemsResult: Product[]) => {
-    let total = 0
-    for (let item of cartItemsResult) {
-      total += item.price
-    }
-    return total.toFixed(2)
-  }
+  const { cartItems, total } = useCart()
 
   return (
     <CartContainer>
@@ -29,7 +20,7 @@ const Cart = () => {
       </CartItemsList>
       {cartItems.length > 0 &&
         <TotalContainer>
-          <span>Subtotal: ${calculateTotal(cartItems)}</span>
+          <span>Subtotal: ${total}</span>
           <button>Checkout</button>
         </TotalContainer>
       }
