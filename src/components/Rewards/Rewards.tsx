@@ -1,5 +1,6 @@
 import { RewardsContainer, MemberCard, Coupons } from "./styles"
 
+// TODO: Make this functional. Hardcoded for now.
 const Rewards = () => {
   return (
     <RewardsContainer>

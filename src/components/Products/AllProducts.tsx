@@ -24,7 +24,6 @@ const AllProducts = () => {
     )
   }
 
-  // Defines types for product.productsData and if not undefined, assign value of products to productsData. This is used to render products on the page if any exist.
   let productsData: ProductsResponse | undefined
   if (products.productsData) productsData = products
 
