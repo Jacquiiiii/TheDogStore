@@ -1,7 +1,5 @@
-// External imports
 import { Route, Routes } from "react-router-dom"
 
-// Components
 import Header from '../Header/Header'
 import Home from '../Home/Home'
 import About from '../About/About'

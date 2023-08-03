@@ -1,15 +1,11 @@
-// External imports
 import type { ReactNode } from 'react'
 import { renderHook, waitFor } from '@testing-library/react'
 import { Provider } from 'react-redux'
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'
+import { store } from '../../store'
+import { useGetProductsByBrandQuery, useGetProductsByCategoryQuery, useGetProductsQuery } from '../productsApiSlice'
 
-// Store & Slices
-import { store } from '../../../store'
-import { useGetProductsByBrandQuery, useGetProductsByCategoryQuery, useGetProductsQuery } from '../../productsApiSlice'
-
-// Mock data
 import { 
   foodData,
   treatsData, 
@@ -17,7 +13,7 @@ import {
   suppliesData, 
   productsData, 
   kongBrandData 
-} from '../../../../__mocks__/data/productsData'
+} from '../../../__mocks__/data/productsData'
 
 function wrapper({ children }: { children: ReactNode }) {
   return <Provider store={store}>{children}</Provider>

@@ -1,28 +1,13 @@
-// External imports
-import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-
-// Store & Slices
+import { useSelector } from 'react-redux'
 import { RootState } from '../../store/store'
-import { logoutSuccess, setUserId } from '../../store/slices/loginSlice'
-import { clearCart } from '../../store/slices/cartSlice'
-
-// Styles
 import { HeaderContainer, NavLink } from './styles'
+import useLogout from '../../hooks/useLogout'
 
 const Header = () => {
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
   const cartItems = useSelector((state: RootState) => state.cart)
   const isLoggedIn: boolean = useSelector((state: RootState) => state.login.isLoggedIn)
 
-  const handleLogout = () => {
-    dispatch(logoutSuccess())
-    dispatch(setUserId(''))
-    dispatch(clearCart())
-    localStorage.setItem('jwtToken', '')
-    navigate('/')
-  }
+  const handleLogout = useLogout()
 
   return (
     <HeaderContainer>
@@ -33,7 +18,9 @@ const Header = () => {
       </div>
       <h1>The Dog Store</h1>
       <div>
-        {!isLoggedIn && <NavLink to="/Login" data-cy="login-link">Login</NavLink>}
+        {!isLoggedIn && 
+          <NavLink to="/Login" data-cy="login-link">Login</NavLink>
+        }
         {isLoggedIn &&
           <>
             <button onClick={handleLogout} data-cy="logout-button">Logout</button>

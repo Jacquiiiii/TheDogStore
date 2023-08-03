@@ -1,27 +1,22 @@
-// External imports
-import { useState } from 'react'
-
-// Styling
+import useNeedHelpModal from '../../hooks/useNeedHelpModal'
 import { HomeContainer } from './styles'
 
 const Home = () => {
-  const [showModal, setShowModal] = useState(false)
-
-  const handleButtonClick = () => {
-    setShowModal(true)
-  }
-
-  const handleCloseModal = () => {
-    setShowModal(false)
-  }
+  const { handleModalChange, showModal } = useNeedHelpModal()
 
   return (
     <HomeContainer>
       {!showModal &&
-        <button onClick={handleButtonClick} data-cy="help-button">Need help?</button>
+        <button 
+          onClick={() => handleModalChange(true)} 
+          data-cy="help-button">Need help?
+        </button>
       }
       {showModal && 
-        <button onClick={handleCloseModal} data-cy="contact-info">Call us at 1-800-123-4567</button>
+        <button 
+          onClick={() => handleModalChange(false)} 
+          data-cy="contact-info">Call us at 1-800-123-4567
+        </button>
       }
     </HomeContainer>
   )

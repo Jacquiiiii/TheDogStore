@@ -1,16 +1,13 @@
-// External imports
 import type { ReactNode } from 'react'
 import { renderHook, waitFor } from '@testing-library/react'
 import { Provider } from 'react-redux'
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'
 
-// Store & Slices
-import { store } from '../../../store'
-import { useGetAllUsersQuery, useGetUserByEmailQuery } from '../../usersApiSlice'
+import { store } from '../../store'
+import { useGetAllUsersQuery, useGetUserByEmailQuery } from '../usersApiSlice'
 
-// Mock data
-import { usersData, user1Data, user2Data } from '../../../../__mocks__/data/usersData'
+import { usersData, user1Data, user2Data } from '../../../__mocks__/data/usersData'
 
 function wrapper({ children }: { children: ReactNode }) {
   return <Provider store={store}>{children}</Provider>

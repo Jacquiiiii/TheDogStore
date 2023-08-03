@@ -1,7 +1,4 @@
-// External imports
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-
-// Types
 import { CartItemObj } from '../../types/types'
 
 export const cartSlice = createSlice({
@@ -26,8 +23,5 @@ export const cartSlice = createSlice({
   },
 })
 
-// Action creator used to dispatch action to the store to set the products state
 export const { addItemToCart, removeItemFromCart, clearCart } = cartSlice.actions
-
-// Reducer function passed to the store to update the state based on action dispatched
 export default cartSlice.reducer

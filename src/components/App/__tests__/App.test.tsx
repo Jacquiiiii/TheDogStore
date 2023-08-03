@@ -1,12 +1,8 @@
-// External imports
 import { screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
-
-// Components
-import App from '../App'
-
-// Store & Slices
 import { renderWithProviders } from '../../../utils/utils-for-tests'
+
+import App from '../App'
 
 describe('App', () => {
   test('renders without crashing', () => {

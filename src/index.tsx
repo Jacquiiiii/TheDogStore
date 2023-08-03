@@ -3,15 +3,10 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from "react-router-dom"
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
-
-// Components
-import App from './components/App/App'
-
-// Store
 import { store, persistor } from './store/store'
-
-// Styles
 import './styles/styles.css'
+
+import App from './components/App/App'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

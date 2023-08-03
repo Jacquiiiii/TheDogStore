@@ -1,7 +1,6 @@
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const db = require('../models')
-
 const secret = process.env.SECRET || 'samplesecret'
 
 const getAllUsers = async (req, res) => {
@@ -39,23 +38,23 @@ const login = async (req, res) => {
     const { email, password } = req.body
     const existingUser = await db.User.findOne({ where: { email } })
 
-    if(!existingUser) {
+    if (!existingUser) {
       return res.json({ msg: `No account with this email found` })
     }
 
     const doesPasswordMatch = bcrypt.compareSync(password, existingUser.password)
 
-    if(!doesPasswordMatch) {
+    if (!doesPasswordMatch) {
       return res.json({ msg: `Passwords did not match` })
     }
 
     const token = jwt.sign(
-      {userId: existingUser.id, email: existingUser.email}, 
-      secret, 
-      {expiresIn: '24h'}
+      { userId: existingUser.id, email: existingUser.email },
+      secret,
+      { expiresIn: '24h' }
     )
 
-    res.json({existingUser, token})
+    res.json({ existingUser, token })
   } catch (error) {
     res.status(500).json({ error: error.message })
   }

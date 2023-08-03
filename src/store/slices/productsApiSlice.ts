@@ -1,4 +1,3 @@
-// External imports
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 type Response = any
@@ -22,5 +21,4 @@ export const productsAPI = createApi({
   }),
 })
 
-// Exports queries for use in other components
 export const { useGetProductsQuery, useGetProductsByCategoryQuery, useGetProductsByBrandQuery } = productsAPI
