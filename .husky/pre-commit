@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Set CI environment variable to run tests in non-interactive mode
+export CI=true
+
+# Run unit tests
+echo "Running unit tests..."
+npm run unit --watchAll=false
+
+# Check if tests passed
+if [ $? -ne 0 ]; then
+    echo "Unit tests failed. Aborting commit."
+    exit 1
+fi

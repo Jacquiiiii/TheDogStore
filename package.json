@@ -47,7 +47,8 @@
     "test": "react-scripts test --coverage --watchAll",
     "unit": "react-scripts test",
     "test:backend": "NODE_ENV=test jest server/**/**/*.test.js --detectOpenHandles",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -80,6 +81,7 @@
     "jest": "^27.5.1",
     "jest-fetch-mock": "^3.0.3",
     "msw": "^1.2.1",
-    "supertest": "^6.3.3"
+    "supertest": "^6.3.3",
+    "husky": "^8.0.0"
   }
 }
