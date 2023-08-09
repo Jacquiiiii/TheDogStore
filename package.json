@@ -61,7 +61,10 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
-      "!src/index.tsx"
+      "!src/index.tsx",
+      "!src/stories/**/*.{js,jsx,ts,tsx}",
+      "!src/types/*.{js,jsx,ts,tsx}",
+      "!src/react-app-env.d.ts"
     ]
   },
   "browserslist": {
