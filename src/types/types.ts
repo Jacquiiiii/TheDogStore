@@ -7,6 +7,13 @@ export interface ButtonProps {
   dataCy?: string;
 }
 
+// Modal types
+export interface ModalProps {
+  modalText: string;
+  onClick?: () => void;
+  dataCy?: string;
+}
+
 // Product types
 export interface Product {
   id: number;
