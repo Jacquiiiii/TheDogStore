@@ -45,21 +45,6 @@ const ProductInfo = styled.div`
     align-items: center;
     gap: 10px;
     font-weight: bold;
-    button {
-      border: none;
-      border-radius: 0.5em;
-      background-color: #4CAF50;
-      font-weight: bold;
-      padding: 0.75em 1em;
-      color: whitesmoke;
-      cursor: pointer;
-      font-size: 15px;
-      box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.5);
-      margin-left: 0.5em;
-    }
-    button:active {
-      transform: scale(0.95);
-    }
   }
 `
 

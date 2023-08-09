@@ -2,6 +2,9 @@ import { useDispatch } from 'react-redux'
 import { addItemToCart } from '../../store/slices/cartSlice'
 import { ProductProps } from '../../types/types'
 import { ProductCardContainer, ProductInfo } from './styles'
+import { greenButtonColor } from '../../constants/constants'
+
+import Button from '../Button/Button'
 
 const ProductCard = (props: ProductProps) => {
   const { product } = props
@@ -14,7 +17,7 @@ const ProductCard = (props: ProductProps) => {
         <span>{product.brand}: {product.name}</span>
         <div>
           <span data-testid="product-card-price">${product.price}</span>
-          <button onClick={() => dispatch(addItemToCart(product))}>Add to cart</button>
+          <Button buttonText="Add to cart" color={greenButtonColor} onClick={() => dispatch(addItemToCart(product))} />
         </div>
       </ProductInfo>
     </ProductCardContainer>

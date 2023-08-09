@@ -22,6 +22,7 @@ Back-end:
 Testing:
 - React testing library
 - Jest
+- Storybook
 - Coming soon: Cypress
 
 CI/CD:
