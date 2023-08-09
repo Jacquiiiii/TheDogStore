@@ -1,4 +1,7 @@
+import { blueButtonColor } from "../../constants/constants"
 import { RewardsContainer, MemberCard, Coupons } from "./styles"
+
+import Button from "../Button/Button"
 
 // TODO: Make this functional. Hardcoded for now.
 const Rewards = () => {
@@ -13,27 +16,27 @@ const Rewards = () => {
         <div>
           <h3>$5.00 off</h3>
           <span>500 points</span>
-          <button>Redeem</button>
+          <Button buttonText="Redeem" color={blueButtonColor} />
         </div>
         <div>
           <h3>$10.00 off</h3>
           <span>1000 points</span>
-          <button>Redeem</button>
+          <Button buttonText="Redeem" color={blueButtonColor} />
         </div>
         <div>
           <h3>$15.00 off</h3>
           <span>1500 points</span>
-          <button>Redeem</button>
+          <Button buttonText="Redeem" color={blueButtonColor} />
         </div>
         <div>
           <h3>$20.00 off</h3>
           <span>2000 points</span>
-          <button>Redeem</button>
+          <Button buttonText="Redeem" color={blueButtonColor} />
         </div>
         <div>
           <h3>$25.00 off</h3>
           <span>2500 points</span>
-          <button>Redeem</button>
+          <Button buttonText="Redeem" color={blueButtonColor} />
         </div>
       </Coupons>
     </RewardsContainer>

@@ -55,19 +55,6 @@ const Coupons = styled.div`
     span {
       font-size: 13px;
     }
-    button {
-      border-radius: 1em;
-      border: none;
-      background: #008CBA;
-      color: whitesmoke;
-      font-weight: bold;
-      padding: 0.5em 1em;
-      border-radius: 0.25em;
-      box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.5);
-      cursor: pointer;
-      font-size: 18px;
-      margin-top: 1em;
-    }
   }
 `
 

@@ -1,8 +1,10 @@
 import { Product } from '../../types/types'
 import { CartContainer, CartItemsList, ProductsLink, TotalContainer, Header } from './styles'
 import useCart from '../../hooks/useCart'
+import { greenButtonColor } from '../../constants/constants'
 
 import CartItem from './CartItem'
+import Button from '../Button/Button'
 
 const Cart = () => {
   const { cartItems, total } = useCart()
@@ -21,7 +23,7 @@ const Cart = () => {
       {cartItems.length > 0 &&
         <TotalContainer>
           <span>Subtotal: ${total}</span>
-          <button>Checkout</button>
+          <Button buttonText="Checkout" color={greenButtonColor} />
         </TotalContainer>
       }
     </CartContainer>

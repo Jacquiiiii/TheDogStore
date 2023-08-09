@@ -1,3 +1,12 @@
+// Button types
+export interface ButtonProps {
+  buttonText: string;
+  onClick?: () => void;
+  color: string;
+  width?: string;
+  dataCy?: string;
+}
+
 // Product types
 export interface Product {
   id: number;
