@@ -6,6 +6,10 @@ import { blueButtonColor, greenButtonColor } from '../../constants/constants'
 export default {
   title: 'Components/Button',
   component: Button,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
   argTypes: {
     color: { control: 'color' },
     width: { control: 'text' },
@@ -31,7 +35,7 @@ GreenButton.args = {
 export const OtherColorButton = Template.bind({})
 OtherColorButton.args = {
   buttonText: 'Customize this color under controls to see how it looks',
-  color: '',
+  color: 'purple',
 }
 
 export const OtherTextButton = Template.bind({})
