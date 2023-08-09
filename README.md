@@ -26,6 +26,7 @@ Testing:
 - Coming soon: Cypress
 
 CI/CD:
+- Husky for pre-commit unit tests
 - GitHub Actions
 
 ## Getting started:
