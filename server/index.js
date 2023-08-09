@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const db = require('./models')
+const routes = require('./routes')
 const port = process.env.PORT || 54321
 
 app.use(cors())
@@ -15,11 +16,8 @@ db.sequelize.sync().then(function () {
   console.log(err)
 })
 
-const productRoutes = require('./routes/productRoutes')
-const userRoutes = require('./routes/userRoutes')
-
-app.use('/products', productRoutes)
-app.use('/users', userRoutes)
+app.use('/products', routes.productRoutes)
+app.use('/users', routes.userRoutes)
 
 app.listen(port, () => console.log(`app is listening on port ${port}`))
 
