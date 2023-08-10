@@ -3,8 +3,12 @@ const cors = require('cors')
 const app = express()
 const db = require('./models')
 const routes = require('./routes')
+const loggerMiddleware = require('./middlewares/loggerMiddleware')
+
 const port = process.env.PORT || 54321
 
+// Middlewares
+app.use(loggerMiddleware)
 app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
