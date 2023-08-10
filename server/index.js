@@ -2,8 +2,13 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const db = require('./models')
+const routes = require('./routes')
+const loggerMiddleware = require('./middlewares/loggerMiddleware')
+
 const port = process.env.PORT || 54321
 
+// Middlewares
+app.use(loggerMiddleware)
 app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -15,11 +20,8 @@ db.sequelize.sync().then(function () {
   console.log(err)
 })
 
-const productRoutes = require('./routes/productRoutes')
-const userRoutes = require('./routes/userRoutes')
-
-app.use('/products', productRoutes)
-app.use('/users', userRoutes)
+app.use('/products', routes.productRoutes)
+app.use('/users', routes.userRoutes)
 
 app.listen(port, () => console.log(`app is listening on port ${port}`))
 
