@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Product } from '../../types/types'
 import { CartContainer, CartItemsList, ProductsLink, TotalContainer, Header } from './styles'
 import useCart from '../../hooks/useCart'
@@ -23,7 +24,9 @@ const Cart = () => {
       {cartItems.length > 0 &&
         <TotalContainer>
           <span>Subtotal: ${total}</span>
-          <Button buttonText="Checkout" color={greenButtonColor} />
+          <Link to='/Checkout'>
+            <Button buttonText="Pay Now" color={greenButtonColor} />
+          </Link>
         </TotalContainer>
       }
     </CartContainer>
