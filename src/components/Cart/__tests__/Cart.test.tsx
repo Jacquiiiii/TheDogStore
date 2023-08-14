@@ -42,7 +42,7 @@ describe('Cart', () => {
     expect(screen.getByText('Subtotal: $68.41')).toBeInTheDocument()
   })
 
-  it('renders a checkout button when there are items in the cart', () => {
+  it('renders a pay now button when there are items in the cart', () => {
     const initialState: any = cartData
 
     renderWithProviders(
@@ -52,6 +52,6 @@ describe('Cart', () => {
       { initialState }
     )
   
-    expect(screen.getByRole('button', { name: 'Checkout' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Pay Now' })).toBeInTheDocument()
   })
 })

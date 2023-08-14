@@ -12,6 +12,7 @@ import Cart from '../Cart/Cart'
 import Login from '../Login/Login'
 import Register from "../Register/Register"
 import Rewards from "../Rewards/Rewards"
+import Checkout from "../Checkout/Checkout"
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/Toys" element={<Toys />} />
         <Route path="/Supplies" element={<Supplies />} />
         <Route path="/Cart" element={<Cart />} />
+        <Route path="/Checkout" element={<Checkout />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/Rewards" element={<Rewards />} />
