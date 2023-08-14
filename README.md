@@ -55,7 +55,7 @@ CI/CD:
 - Run back-end tests: `npm run test:backend`
 
 ## Accessing psql:
-- WSL: `sudo -u postgres psql database_name`
+- WSL: `sudo service postgresql start && sudo -u postgres psql database_name`
 - MacOs: `psql -U username -d database_name`
 
 ## Database queries:
