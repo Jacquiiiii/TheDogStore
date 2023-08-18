@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const CartContainer = styled.div`
+const OrderConfirmationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +9,7 @@ const CartContainer = styled.div`
   overflow-y: scroll;
 `
 
-const CartItemsList = styled.ul`
+const OrderConfirmationDetails = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,11 +24,7 @@ const CartItemsList = styled.ul`
   }
 `
 
-const ProductsLink = styled(Link)`
-  color: red;
-`
-
-const TotalContainer = styled.div`
+const BackContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -45,18 +40,4 @@ const Header = styled.h2`
   width: 60%;
 `
 
-const CartItemContainer = styled.li`
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5em;
-  button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  button:active {
-    transform: scale(0.95);
-  }
-`
-
-export { CartContainer, CartItemsList, ProductsLink, TotalContainer, Header, CartItemContainer }
+export { OrderConfirmationContainer, OrderConfirmationDetails, BackContainer, Header }

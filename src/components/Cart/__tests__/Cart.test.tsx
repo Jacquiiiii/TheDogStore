@@ -52,6 +52,6 @@ describe('Cart', () => {
       { initialState }
     )
   
-    expect(screen.getByRole('button', { name: 'Pay Now' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Checkout' })).toBeInTheDocument()
   })
 })

@@ -25,7 +25,7 @@ const Cart = () => {
         <TotalContainer>
           <span>Subtotal: ${total}</span>
           <Link to='/Checkout'>
-            <Button buttonText="Pay Now" color={greenButtonColor} />
+            <Button buttonText="Checkout" color={greenButtonColor} />
           </Link>
         </TotalContainer>
       }

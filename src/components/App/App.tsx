@@ -13,6 +13,7 @@ import Login from '../Login/Login'
 import Register from "../Register/Register"
 import Rewards from "../Rewards/Rewards"
 import Checkout from "../Checkout/Checkout"
+import OrderConfirmation from "../OrderConfirmation/OrderConfirmation"
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/Rewards" element={<Rewards />} />
+        <Route path="/Order-Confirmation" element={<OrderConfirmation />} />
       </Routes>
     </div>
   )

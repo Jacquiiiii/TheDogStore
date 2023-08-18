@@ -6,7 +6,7 @@ const CheckoutContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 2em;
+  margin-top: 1.5em;
   margin-bottom: 2em;
   input {
     padding: 1em;
@@ -18,6 +18,18 @@ const CheckoutContainer = styled.div`
     font-size: 16px;
     background-color: #f2f2f2;
   }
+  h4 {
+    margin: 0;
+  }
 `
 
-export { CheckoutContainer }
+const SideBySide = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 75%;
+  margin-bottom: 0.25em;
+`
+
+export { CheckoutContainer, SideBySide }
