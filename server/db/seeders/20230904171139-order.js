@@ -4,15 +4,13 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Orders', [
       {
-        orderNumber: 123,
-        total: 62.99,
+        total: 62.55,
         userId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        orderNumber: 124,
-        total: 24.15,
+        total: 24.12,
         userId: 2,
         createdAt: new Date(),
         updatedAt: new Date()
