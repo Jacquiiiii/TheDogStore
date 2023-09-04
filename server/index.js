@@ -22,6 +22,7 @@ db.sequelize.sync().then(function () {
 
 app.use('/products', routes.productRoutes)
 app.use('/users', routes.userRoutes)
+app.use('/orders', routes.orderRoutes)
 
 app.listen(port, () => console.log(`app is listening on port ${port}`))
 

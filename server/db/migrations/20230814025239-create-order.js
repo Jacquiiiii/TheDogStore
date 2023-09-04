@@ -15,7 +15,7 @@ module.exports = {
       total: {
         type: Sequelize.INTEGER
       },
-      userNumber: {
+      userId: {
         type: Sequelize.INTEGER
       },
       createdAt: {

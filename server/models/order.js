@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
   Order.init({
     orderNumber: DataTypes.INTEGER,
     total: DataTypes.INTEGER,
-    userNumber: DataTypes.INTEGER
+    userId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Order',
