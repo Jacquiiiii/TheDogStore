@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { useAddOrderMutation, useGetOrderByUserIdQuery } from '../store/slices/ordersApiSlice'
+import { useAddOrderMutation } from '../store/slices/ordersApiSlice'
 import { RootState } from '../store/store'
 import { useDispatch } from 'react-redux'
 import { clearCart } from '../store/slices/cartSlice'
