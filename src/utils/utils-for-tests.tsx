@@ -9,6 +9,7 @@ import cartReducer from '../store/slices/cartSlice'
 import loginReducer from '../store/slices/loginSlice'
 import { productsAPI } from '../store/slices/productsApiSlice'
 import { usersAPI } from '../store/slices/usersApiSlice'
+import { ordersAPI } from '../store/slices/ordersApiSlice'
 
 const persistConfig = {
   key: 'root',
@@ -32,10 +33,11 @@ export function renderWithProviders(
         login: persistedLoginReducer,
         [productsAPI.reducerPath]: productsAPI.reducer,
         [usersAPI.reducerPath]: usersAPI.reducer,
+        [ordersAPI.reducerPath]: ordersAPI.reducer,
       },
       middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: false
-      }).concat(productsAPI.middleware).concat(usersAPI.middleware)
+      }).concat(productsAPI.middleware).concat(usersAPI.middleware).concat(ordersAPI.middleware)
     }),
     ...renderOptions
   }: ExtendedRenderOptions = {}

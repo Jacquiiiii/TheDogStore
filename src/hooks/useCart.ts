@@ -11,6 +11,7 @@ const useCart = () => {
     for (let item of cartItemsResult) {
       total += item.price
     }
+    localStorage.setItem('cartTotal', total.toFixed(2))
     return total.toFixed(2)
   }
 

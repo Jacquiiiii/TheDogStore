@@ -2,8 +2,10 @@ import { Link } from "react-router-dom"
 import { greenButtonColor } from "../../constants/constants"
 import Button from "../Button/Button"
 import { CheckoutContainer, SideBySide } from "./styles"
+import useOrder from "../../hooks/useOrder"
 
 const Checkout = () => {
+  const { handleCreateOrder } = useOrder()
 
   return (
     <CheckoutContainer>
@@ -33,9 +35,7 @@ const Checkout = () => {
         <Link to="/Cart">
           <Button buttonText="Back" color={greenButtonColor} />
         </Link>
-        <Link to="/Order-Confirmation">
-          <Button buttonText="Submit" color={greenButtonColor} />
-        </Link>
+        <Button onClick={handleCreateOrder} buttonText="Submit" color={greenButtonColor} />
       </SideBySide>
     </CheckoutContainer>
   )

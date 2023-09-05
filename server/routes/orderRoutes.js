@@ -3,6 +3,7 @@ const router = express.Router()
 const Order = require('../controllers/Order')
 
 router.get('/', Order.getAllOrders)
-router.get('/:userId', Order.getOrderByUserId)
+router.get('/:userId', Order.getOrdersByUserId)
+router.post('/', Order.createOrder)
 
 module.exports = router
