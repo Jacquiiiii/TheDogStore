@@ -60,5 +60,4 @@ CI/CD:
 ## Database queries:
 - To see all products: `SELECT * FROM "Products";`
 - To see all users: `SELECT * FROM "Users";`
-- To see all users: `SELECT * FROM "Users";`
 - To see all orders: `SELECT * FROM "Orders";`
