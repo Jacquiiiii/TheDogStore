@@ -20,15 +20,14 @@ const Header = styled.h2`
 const ProductCardContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1.5em;
+  justify-content: space-between;
   width: 40%;
   height: 300px;
   padding: 1em;
   box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.5);
   border-radius: 0.25em;
   img {
-    width: 50%;
+    width: 35%;
     height: auto;
   };
 `

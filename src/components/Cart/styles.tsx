@@ -19,7 +19,6 @@ const CartItemsList = styled.ul`
   border-radius: 0.25em;
   box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.5);
   border: none;
-  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   span {
     align-self: center;
   }

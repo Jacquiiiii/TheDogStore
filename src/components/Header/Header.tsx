@@ -11,23 +11,23 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <div>
-        <NavLink to="/" data-cy="home-link">Home</NavLink>
-        <NavLink to="/About" data-cy="about-link">About Us</NavLink>
-        <NavLink to="/AllProducts" data-cy="shop-link">Shop</NavLink>
-      </div>
       <h1>The Dog Store</h1>
       <div>
+        <NavLink to="/" data-cy="home-link">Home</NavLink>
+        <NavLink to="/About" data-cy="about-link">About</NavLink>
+        <NavLink to="/AllProducts" data-cy="shop-link">Shop</NavLink>
         {!isLoggedIn && 
           <NavLink to="/Login" data-cy="login-link">Login</NavLink>
         }
         {isLoggedIn &&
           <>
-            <button onClick={handleLogout} data-cy="logout-button">Logout</button>
+            <NavLink to="/">
+              <button onClick={handleLogout} data-cy="logout-button">Logout</button>
+            </NavLink>
             <NavLink to="/Rewards" data-cy="rewards-link">Rewards</NavLink>
           </>
         }
-        <NavLink to="/Cart" data-cy="cart-link">My Cart ({cartItems.length})</NavLink>
+        <NavLink to="/Cart" data-cy="cart-link">Cart ({cartItems.length})</NavLink>
       </div>
     </HeaderContainer>
   )

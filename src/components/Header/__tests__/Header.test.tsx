@@ -75,7 +75,7 @@ describe('Navigation links', () => {
     expect(screen.getByText(/about/i)).toBeInTheDocument()
     expect(screen.getByText(/shop/i)).toBeInTheDocument()
     expect(screen.getByText(/login/i)).toBeInTheDocument()
-    expect(screen.getByText(/my cart/i)).toBeInTheDocument()
+    expect(screen.getByText(/cart/i)).toBeInTheDocument()
   })
 
   it('navigates to / when about home is clicked', () => {
@@ -118,7 +118,7 @@ describe('Navigation links', () => {
 
   it('navigates to about when about link is clicked', () => {
     act(() => {
-      userEvent.click(screen.getByText(/my cart/i))
+      userEvent.click(screen.getByText(/cart/i))
     })
 
     expect(window.location.pathname).toBe('/Cart')

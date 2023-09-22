@@ -6,4 +6,4 @@ export const aboutText1 = "Here at the dog store, we're passionate about providi
 export const aboutText2 = "We believe that every dog deserves the very best, which is why we source only the highest quality ingredients for our dog food products. Our team of experts carefully selects each ingredient based on its nutritional value and suitability for dogs, ensuring that our food is not only delicious but also packed with essential nutrients."
 
 export const blueButtonColor = "#008CBA"
-export const greenButtonColor = "#4CAF50"
+export const greenButtonColor = "#33b249"
