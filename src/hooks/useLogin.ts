@@ -28,7 +28,24 @@ const useLogin = () => {
     }
   }
 
-  return { setEmail, setPassword, handleSubmit }
+  const handleSubmitAndBackToCart = async () => {
+    try {
+      const response = await findUser({ email, password })
+
+      if ('data' in response && response.data && response.data.existingUser) {
+        dispatch(loginSuccess())
+        dispatch(setUserId(response.data.existingUser.id.toString()))
+        localStorage.setItem('jwtToken', response.data.token)
+        navigate('/Cart')
+      } else {
+        alert('Invalid email address or password')
+      }
+    } catch (error) {
+      alert('An error occurred while logging in. Please try again later.')
+    }
+  }
+
+  return { setEmail, setPassword, handleSubmit, handleSubmitAndBackToCart }
 }
 
 export default useLogin

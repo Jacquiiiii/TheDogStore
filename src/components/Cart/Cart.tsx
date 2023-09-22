@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../store/store'
 import { Product } from '../../types/types'
 import { CartContainer, CartItemsList, ProductsLink, TotalContainer, Header } from './styles'
 import useCart from '../../hooks/useCart'
@@ -6,9 +8,11 @@ import { greenButtonColor } from '../../constants/constants'
 
 import CartItem from './CartItem'
 import Button from '../Button/Button'
+import { backToCart } from '../../utils/helpers'
 
 const Cart = () => {
   const { cartItems, total } = useCart()
+  const isLoggedIn: boolean = useSelector((state: RootState) => state.login.isLoggedIn)
 
   return (
     <CartContainer>
@@ -24,9 +28,16 @@ const Cart = () => {
       {cartItems.length > 0 &&
         <TotalContainer>
           <span>Subtotal: ${total}</span>
-          <Link to='/Checkout'>
-            <Button buttonText="Checkout" color={greenButtonColor} />
-          </Link>
+          { isLoggedIn &&
+            <Link to='/Checkout'>
+              <Button onClick={() => backToCart(false)} buttonText="Checkout" color={greenButtonColor} />
+            </Link>
+          }
+          { !isLoggedIn &&
+            <Link to='/Login'>
+              <Button onClick={() => backToCart(true)} buttonText="Login to proceed to checkout" color={greenButtonColor} /> 
+            </Link>
+          }
         </TotalContainer>
       }
     </CartContainer>
