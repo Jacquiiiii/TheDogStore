@@ -26,7 +26,6 @@ const ProductCardContainer = styled.div`
   height: 300px;
   padding: 1em;
   box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.5);
-  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   border-radius: 0.25em;
   img {
     width: 50%;
