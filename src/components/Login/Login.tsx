@@ -27,7 +27,7 @@ const Login = () => {
         { backToCart === 'true' &&
           <LoginButton onClick={handleSubmitAndBackToCart} data-cy="login-button">Login</LoginButton>
         }
-        { backToCart === 'false' &&
+        { (backToCart === 'false' || !backToCart) &&
           <LoginButton onClick={handleSubmit} data-cy="login-button">Login</LoginButton>
         }
         <RegisterButton to="/Register">Don't have an account? Register now</RegisterButton>

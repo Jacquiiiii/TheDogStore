@@ -17,7 +17,7 @@ describe('Cart', () => {
   })
 
   it('renders a message when there are no items in the cart', () => {
-    const initialState: any = { cart: [] }
+    const initialState: any = { login: { isLoggedIn: true, userId: '1' }, cart: [] }
 
     renderWithProviders(
       <BrowserRouter>
@@ -30,7 +30,7 @@ describe('Cart', () => {
   })
   
   it('calculates and displays the correct subtotal when there are items in cart', () => {
-    const initialState: any = cartData
+    const initialState: any = { login: { isLoggedIn: true, userId: '1' }, cart: cartData.cart }
 
     renderWithProviders(
       <BrowserRouter>
@@ -42,8 +42,8 @@ describe('Cart', () => {
     expect(screen.getByText('Subtotal: $68.41')).toBeInTheDocument()
   })
 
-  it('renders a pay now button when there are items in the cart', () => {
-    const initialState: any = cartData
+  it('renders a checkout button when there are items in the cart', () => {
+    const initialState: any = { login: { isLoggedIn: true, userId: '1' }, cart: cartData.cart }
 
     renderWithProviders(
       <BrowserRouter>
@@ -53,5 +53,18 @@ describe('Cart', () => {
     )
   
     expect(screen.getByRole('button', { name: 'Checkout' })).toBeInTheDocument()
+  })
+
+  it('renders a login to checkout button when there are items in the cart', () => {
+    const initialState: any = { login: { isLoggedIn: false, userId: '' }, cart: cartData.cart }
+
+    renderWithProviders(
+      <BrowserRouter>
+        <Cart />
+      </BrowserRouter>,
+      { initialState }
+    )
+  
+    expect(screen.getByRole('button', { name: 'Login to proceed to checkout' })).toBeInTheDocument()
   })
 })

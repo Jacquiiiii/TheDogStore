@@ -60,7 +60,6 @@ describe('Login', () => {
       { isLoading: false, isError: false }
     ])
 
-
     const useDispatchMock = jest.spyOn(require('react-redux'), 'useDispatch')
     const dispatchMock = jest.fn()
 

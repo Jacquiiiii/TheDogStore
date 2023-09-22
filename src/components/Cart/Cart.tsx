@@ -30,12 +30,12 @@ const Cart = () => {
           <span>Subtotal: ${total}</span>
           { isLoggedIn &&
             <Link to='/Checkout'>
-              <Button onClick={() => backToCart(false)} buttonText="Checkout" color={greenButtonColor} />
+              <Button onClick={() => backToCart(false)} buttonText="Checkout" color={greenButtonColor} data-testId="checkout-button"/>
             </Link>
           }
           { !isLoggedIn &&
             <Link to='/Login'>
-              <Button onClick={() => backToCart(true)} buttonText="Login to proceed to checkout" color={greenButtonColor} /> 
+              <Button onClick={() => backToCart(true)} buttonText="Login to proceed to checkout" color={greenButtonColor} data-testId="checkout-button" /> 
             </Link>
           }
         </TotalContainer>

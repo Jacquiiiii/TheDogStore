@@ -7,6 +7,10 @@ const useCart = () => {
   const cartItems = useSelector((state: RootState) => state.cart)
 
   const calculateTotal = (cartItemsResult: Product[]) => {
+    if (!Array.isArray(cartItemsResult)) {
+      throw new Error('cartItemsResult should be an array of Product objects.');
+    }
+    
     let total = 0
     for (let item of cartItemsResult) {
       total += item.price
