@@ -12,6 +12,7 @@ const useLogout = () => {
     dispatch(setUserId(''))
     dispatch(clearCart())
     localStorage.setItem('jwtToken', '')
+    localStorage.setItem('backToCart', 'false')
     navigate('/')
   }
 
