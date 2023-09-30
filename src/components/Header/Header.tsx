@@ -11,9 +11,10 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <h1>The Dog Store</h1>
+      <NavLink to="/" data-cy="home-link">
+        <h1>The Dog Store</h1>
+      </NavLink>
       <div>
-        <NavLink to="/" data-cy="home-link">Home</NavLink>
         <NavLink to="/About" data-cy="about-link">About</NavLink>
         <NavLink to="/AllProducts" data-cy="shop-link">Shop</NavLink>
         {!isLoggedIn && 

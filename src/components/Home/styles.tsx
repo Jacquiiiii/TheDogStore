@@ -3,14 +3,51 @@ import styled from 'styled-components'
 const HomeContainer = styled.div`
   height: 100%;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
   gap: 20px;
-  background-image: url('https://wallpaperaccess.com/full/527085.jpg');
-  background-size: cover;
-  background-position: 50% -10%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  overflow: hidden;
 `
 
-export { HomeContainer }
+const ScrollWrapper = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+`
+
+const LeftSide = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  max-height: 100vh;
+  overflow-y: scroll;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    color: #5dacbd;
+    font-weight: bold;
+    min-height: 100vh;
+  }
+`
+
+const RightSide = styled.div`
+  width: 50%;
+  position: sticky;
+  top: 10px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const Image = styled.img`
+  position: absolute;
+  border-radius: 1em;
+  height: 50vh;
+  width: auto;
+`
+
+export { HomeContainer, ScrollWrapper, LeftSide, RightSide, Image }

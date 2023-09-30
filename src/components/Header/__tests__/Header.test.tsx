@@ -71,7 +71,6 @@ describe('Navigation links', () => {
   })
 
   it('renders navigation links', () => {
-    expect(screen.getByText(/home/i)).toBeInTheDocument()
     expect(screen.getByText(/about/i)).toBeInTheDocument()
     expect(screen.getByText(/shop/i)).toBeInTheDocument()
     expect(screen.getByText(/login/i)).toBeInTheDocument()
@@ -86,7 +85,7 @@ describe('Navigation links', () => {
     expect(window.location.pathname).toBe('/About')
 
     act(() => {
-      userEvent.click(screen.getByText(/home/i))
+      userEvent.click(screen.getByText('The Dog Store'))
     })
 
     expect(window.location.pathname).toBe('/')
