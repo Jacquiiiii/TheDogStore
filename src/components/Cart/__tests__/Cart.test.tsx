@@ -8,14 +8,14 @@ import { cartData } from '../../../__mocks__/data/cartData'
 import Cart from '../Cart'
 
 describe('Cart', () => {
-  it('renders the my cart text', () => {
+  it('renders the cart text', () => {
     renderWithProviders(
       <BrowserRouter>
         <Cart />
       </BrowserRouter>
     )
 
-    expect(screen.getByText('My Cart')).toBeInTheDocument()
+    expect(screen.getByText('Cart')).toBeInTheDocument()
   })
 
   it('renders a message when there are no items in the cart', () => {

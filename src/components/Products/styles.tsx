@@ -11,9 +11,20 @@ const ProductsContainer = styled.div`
   gap: 20px;
 `
 
+const Filter = styled.div`
+  display: flex;
+  justify-content: space-around;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`
+
 const Header = styled.h2`
   align-self: center;
-  padding-top: 1em;
+  padding-top: 0.5em;
   margin: 0;
 `
 
@@ -52,6 +63,10 @@ const LinkContainer = styled.div`
   justify-content: center;
   gap: 10px;
   padding-top: 1em;
+
+  @media (max-width: 650px) {
+    gap: 5px;
+  }
 `
 
 const NavLink = styled(Link)`
@@ -64,6 +79,10 @@ const NavLink = styled(Link)`
   &: hover {
     color: #505050;
   };
+
+  @media (max-width: 540px) {
+    font-size: 13px;
+  }
 `
 
-export { ProductsContainer, Header, ProductCardContainer, ProductInfo, LinkContainer, NavLink }
+export { ProductsContainer, Header, ProductCardContainer, ProductInfo, LinkContainer, NavLink, Filter }

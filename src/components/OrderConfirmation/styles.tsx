@@ -21,6 +21,10 @@ const OrderConfirmationDetails = styled.ul`
   span {
     align-self: center;
   }
+
+  @media (max-width: 540px) {
+    width: 80%;
+  }
 `
 
 const BackContainer = styled.div`
@@ -30,6 +34,10 @@ const BackContainer = styled.div`
   width: 60%;
   gap: 10px;
   margin-bottom: 1em;
+
+  @media (max-width: 540px) {
+    width: 80%;
+  }
 `
 
 const Header = styled.h2`
@@ -37,6 +45,10 @@ const Header = styled.h2`
   padding-top: 1em;
   margin: 0;
   width: 60%;
+
+  @media (max-width: 540px) {
+    width: 80%;
+  }
 `
 
 export { OrderConfirmationContainer, OrderConfirmationDetails, BackContainer, Header }

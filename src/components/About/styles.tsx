@@ -14,6 +14,7 @@ const ImageContainer = styled.div`
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  margin-bottom: 1em;
   img {
     border-radius: 1em;
     margin-top: 0.75em;

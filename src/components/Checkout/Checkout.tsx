@@ -11,25 +11,25 @@ const Checkout = () => {
     <CheckoutContainer>
       <h4>Personal Information</h4>
       <SideBySide>
-        <input placeholder="Enter first name" />
-        <input placeholder="Enter last name" />
+        <input placeholder="First name" />
+        <input placeholder="Last name" />
       </SideBySide>
       <SideBySide>
-        <input placeholder="Enter street number" />
-        <input placeholder="Enter street name" />
+        <input placeholder="Street number" />
+        <input placeholder="Street name" />
       </SideBySide>
       <SideBySide>
-        <input placeholder="Enter city" />
-        <input placeholder="Enter postal code" />
+        <input placeholder="City" />
+        <input placeholder="Postal code" />
       </SideBySide>
       <h4>Payment Information</h4>
       <SideBySide>
-        <input placeholder="Enter credit card number" />
-        <input placeholder="Enter expiry" />
+        <input placeholder="Credit card number" />
+        <input placeholder="Expiry" />
       </SideBySide>
       <SideBySide>
-        <input placeholder="Enter CVV" />
-        <input placeholder="Enter postal code" />
+        <input placeholder="CVV" />
+        <input placeholder="Postal code" />
       </SideBySide>
       <SideBySide>
         <Link to="/Cart">

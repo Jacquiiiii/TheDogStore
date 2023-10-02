@@ -57,7 +57,7 @@ const Register = () => {
       </RegisterContainer>
       <ButtonContainer>
         <RegisterButton onClick={handleRegister}>Register</RegisterButton>
-        <LoginButton to="/Login">Already have an account? Login now</LoginButton>
+        <LoginButton to="/Login">Or Login</LoginButton>
       </ButtonContainer>
     </>
   )

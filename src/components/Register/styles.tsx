@@ -5,17 +5,21 @@ const RegisterContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100%;
   margin-top: 5em;
   input {
     padding: 1em;
-    width: 30%;
+    width: 50%;
     margin-bottom: 1em;
     border-radius: 0.25em;
     border: none;
     outline: none;
     box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.5);
     font-size: 16px;
-    background-color: #f2f2f2;
+    
+    @media (max-width: 540px) {
+      font-size: 12px;
+    }
   }
 `
 
@@ -26,31 +30,39 @@ const ButtonContainer = styled.div`
 `
 
 const RegisterButton = styled.button`
-  padding: 0.75em;
+  padding: 1em 0.75em;
   border-radius: 0.25em;
   border: none;
-  background-color: #4CAF50;
+  background-color: #347474;
   color: white;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  width: 15%;
+  width: 25%;
   box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.5);
+
+  @media (max-width: 540px) {
+    font-size: 12px;
+  }
 `
 
 const LoginButton = styled(Link)`
-  padding: 0.5em;
+  padding: 1em 0.75em;
   border-radius: 0.25em;
   border: none;
-  background-color: #008CBA;
+  background-color: #347474;
   color: white;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  width: 15%;
+  width: 25%;
   box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.5);
-  text-decoration: none;
   text-align: center;
+  text-decoration: none;
+
+  @media (max-width: 540px) {
+    font-size: 12px;
+  }
 `
 
 export { RegisterContainer, ButtonContainer, RegisterButton, LoginButton }

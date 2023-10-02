@@ -20,7 +20,7 @@ describe('Cart', () => {
     price: 10,
     category: 'Food'
   }
-  it('renders the my cart text', () => {
+  it('removes item from cart and calculates total', () => {
     const useDispatchMock = jest.spyOn(require('react-redux'), 'useDispatch')
     const removeItemDispatch = jest.fn()
 

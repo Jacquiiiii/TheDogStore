@@ -1,7 +1,7 @@
 import { Story, Meta } from '@storybook/react'
 import { ButtonProps } from '../../types/types'
 import Button from '../../components/Button/Button'
-import { blueButtonColor, greenButtonColor } from '../../constants/constants'
+import { greenButtonColor } from '../../constants/constants'
 
 export default {
   title: 'Components/Button',
@@ -23,7 +23,7 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />
 export const BlueButton = Template.bind({})
 BlueButton.args = {
   buttonText: 'Click Me',
-  color: blueButtonColor,
+  color: greenButtonColor,
 }
 
 export const GreenButton = Template.bind({})
@@ -41,20 +41,20 @@ OtherColorButton.args = {
 export const OtherTextButton = Template.bind({})
 OtherTextButton.args = {
   buttonText: 'Customize this text under controls to see how it looks',
-  color: blueButtonColor,
+  color: greenButtonColor,
 }
 
 
 export const WithCustomWidth = Template.bind({})
 WithCustomWidth.args = {
   buttonText: 'Click Me',
-  color: blueButtonColor,
+  color: greenButtonColor,
   width: '400px',
 }
 
 export const WithDataAttribute = Template.bind({});
 WithDataAttribute.args = {
   buttonText: 'Click Me',
-  color: blueButtonColor,
+  color: greenButtonColor,
   dataCy: 'custom-button',
 }

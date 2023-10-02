@@ -5,9 +5,9 @@ const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5em 1.5em;
+  padding: 0 1.5em;
   color: whitesmoke;
-  background: #37474f;
+  background: #393e46;
   font-weight: bold;
   gap: 20px;
   h1 {
@@ -18,6 +18,12 @@ const HeaderContainer = styled.header`
     align-items: center;
     justify-content: center;
     font-size: 16px;
+
+    @media (max-width: 723px) {
+      flex-direction: column;
+      gap: 5px;
+      margin: 1.5em 0;
+    }
   }
   button {
     text-decoration: none;
@@ -31,7 +37,7 @@ const HeaderContainer = styled.header`
     }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 540px) {
     div {
       font-size: 12px;
     }
@@ -39,7 +45,7 @@ const HeaderContainer = styled.header`
       font-size: 12px;
     }
     h1 {
-      font-size: 30px;
+      font-size: 20px;
     }
   }
 `
@@ -48,8 +54,9 @@ const NavLink = styled(Link)`
   text-decoration: none;
   color: whitesmoke;
   padding: 0.5em;
-  &:hover {
-    text-decoration: underline;
+
+  @media (max-width: 540px) {
+    padding: 0;
   }
 `
 

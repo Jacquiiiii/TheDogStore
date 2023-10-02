@@ -1,6 +1,6 @@
 import { useGetProductsQuery } from '../../store/slices/productsApiSlice'
 import { Product, ProductsResponse } from '../../types/types'
-import { ProductsContainer, Header } from './styles'
+import { ProductsContainer, Header, Filter } from './styles'
 
 import ProductCard from './ProductCard'
 import ProductLinks from './ProductLinks'
@@ -29,8 +29,10 @@ const AllProducts = () => {
 
   return (
     <>
-      <ProductLinks />
-      <Header>All Products</Header>
+      <Filter>
+        <Header>All Products</Header>
+        <ProductLinks />
+      </Filter>
       <ProductsContainer data-testid="products-container">
         {productsData && products.productsData.map((product: Product) => (
           <ProductCard product={product} key={product.id} />

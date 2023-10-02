@@ -15,8 +15,8 @@ const Header = () => {
         <h1>The Dog Store</h1>
       </NavLink>
       <div>
-        <NavLink to="/About" data-cy="about-link">About</NavLink>
         <NavLink to="/AllProducts" data-cy="shop-link">Shop</NavLink>
+        <NavLink to="/Cart" data-cy="cart-link">Cart ({cartItems.length})</NavLink>
         {!isLoggedIn && 
           <NavLink to="/Login" data-cy="login-link">Login</NavLink>
         }
@@ -28,7 +28,6 @@ const Header = () => {
             <NavLink to="/Rewards" data-cy="rewards-link">Rewards</NavLink>
           </>
         }
-        <NavLink to="/Cart" data-cy="cart-link">Cart ({cartItems.length})</NavLink>
       </div>
     </HeaderContainer>
   )

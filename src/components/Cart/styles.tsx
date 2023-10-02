@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const CartContainer = styled.div`
@@ -15,33 +14,72 @@ const CartItemsList = styled.ul`
   flex-direction: column;
   justify-content: center;
   padding: 1em;
-  width: 60%;
+  width: 70%;
   border-radius: 0.25em;
   box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.5);
   border: none;
   span {
     align-self: center;
   }
+  img {
+    width: 100px;
+    height: auto;
+  }
+
+  @media (max-width: 540px) {
+    width: 80%;
+  }
 `
 
-const ProductsLink = styled(Link)`
-  color: red;
+const EmptyCart = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  width: 70%;
+  border-radius: 0.25em;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.5);
+  border: none;
+  span {
+    align-self: center;
+  }
+  img {
+    width: 100px;
+    height: auto;
+  }
+
+  @media (max-width: 540px) {
+    width: 80%;
+  }
 `
 
 const TotalContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 60%;
+  width: 70%;
   gap: 10px;
   margin-bottom: 1em;
+
+  @media (max-width: 540px) {
+    width: 80%;
+    font-size: 14px;
+    button {
+      font-size: 14px;
+    }
+  }
 `
 
 const Header = styled.h2`
   align-self: center;
   padding-top: 1em;
   margin: 0;
-  width: 60%;
+  width: 70%;
+
+  @media (max-width: 540px) {
+    width: 80%;
+  }
 `
 
 const CartItemContainer = styled.li`
@@ -56,6 +94,20 @@ const CartItemContainer = styled.li`
   button:active {
     transform: scale(0.95);
   }
+
+  @media (max-width: 540px) {
+    div {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      span {
+        font-size: 14px;
+      }
+    }
+    div:first-child {
+      width: 70%;
+    }
+  }
 `
 
-export { CartContainer, CartItemsList, ProductsLink, TotalContainer, Header, CartItemContainer }
+export { CartContainer, CartItemsList, EmptyCart, TotalContainer, Header, CartItemContainer }

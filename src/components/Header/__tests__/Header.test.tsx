@@ -71,18 +71,17 @@ describe('Navigation links', () => {
   })
 
   it('renders navigation links', () => {
-    expect(screen.getByText(/about/i)).toBeInTheDocument()
     expect(screen.getByText(/shop/i)).toBeInTheDocument()
     expect(screen.getByText(/login/i)).toBeInTheDocument()
     expect(screen.getByText(/cart/i)).toBeInTheDocument()
   })
 
-  it('navigates to / when about home is clicked', () => {
+  it('navigates to / when "The Dog Store" is clicked', () => {
     act(() => {
-      userEvent.click(screen.getByText(/about/i))
+      userEvent.click(screen.getByText(/shop/i))
     })
 
-    expect(window.location.pathname).toBe('/About')
+    expect(window.location.pathname).toBe('/AllProducts')
 
     act(() => {
       userEvent.click(screen.getByText('The Dog Store'))
@@ -91,15 +90,7 @@ describe('Navigation links', () => {
     expect(window.location.pathname).toBe('/')
   })
 
-  it('navigates to about when about link is clicked', () => {
-    act(() => {
-      userEvent.click(screen.getByText(/about/i))
-    })
-
-    expect(window.location.pathname).toBe('/About')
-  })
-
-  it('navigates to about when shop link is clicked', () => {
+  it('navigates to shop when shop link is clicked', () => {
     act(() => {
       userEvent.click(screen.getByText(/shop/i))
     })
@@ -107,7 +98,7 @@ describe('Navigation links', () => {
     expect(window.location.pathname).toBe('/AllProducts')
   })
 
-  it('navigates to about when about link is clicked', () => {
+  it('navigates to login when login link is clicked', () => {
     act(() => {
       userEvent.click(screen.getByText(/login/i))
     })
@@ -115,7 +106,7 @@ describe('Navigation links', () => {
     expect(window.location.pathname).toBe('/Login')
   })
 
-  it('navigates to about when about link is clicked', () => {
+  it('navigates to cart when cart link is clicked', () => {
     act(() => {
       userEvent.click(screen.getByText(/cart/i))
     })

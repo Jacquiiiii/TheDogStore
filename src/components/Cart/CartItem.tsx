@@ -14,7 +14,7 @@ const CartItem = (props: ProductProps) => {
       </div>
       <div>
         <span data-testid="cart-item-price">${product.price}</span>
-        <button onClick={() => dispatch(removeItemFromCart(product))}>🗑️</button>
+        <button onClick={() => dispatch(removeItemFromCart(product))}>❌</button>
       </div>
     </CartItemContainer>
   )

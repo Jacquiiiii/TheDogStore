@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store/store'
 import { Product } from '../../types/types'
-import { CartContainer, CartItemsList, ProductsLink, TotalContainer, Header } from './styles'
+import { CartContainer, CartItemsList, TotalContainer, Header, EmptyCart } from './styles'
 import useCart from '../../hooks/useCart'
 import { greenButtonColor } from '../../constants/constants'
 
@@ -16,26 +16,36 @@ const Cart = () => {
 
   return (
     <CartContainer>
-      <Header>My Cart</Header>
-      <CartItemsList>
-        {cartItems.length === 0 &&
-          <span data-testid="empty-cart">There are currently no items in your cart. Click <ProductsLink to="/AllProducts">here</ProductsLink> to add some!</span>
-        }
-        {cartItems.length > 0 &&
-          cartItems.map((product: Product) => <CartItem product={product} key={product.name} data-testid="cart-item" />)
-        }
-      </CartItemsList>
+      <Header>Cart</Header>
+      {cartItems.length > 0 &&
+        <CartItemsList>
+          {cartItems.map((product: Product) => <CartItem product={product} key={product.name} data-testid="cart-item" />)}
+        </CartItemsList>
+      }
+      {cartItems.length === 0 &&
+        <EmptyCart>
+          <img alt="empty shopping cart" src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-7359557-6024626.png" />
+          <span data-testid="empty-cart">Your cart is currently empty.</span>
+        </EmptyCart>
+      }
+      {cartItems.length === 0 &&
+        <TotalContainer>
+          <Link to="/AllProducts">
+            <Button buttonText="Continue shopping" color={greenButtonColor} data-testId="continue-shopping-button" />
+          </Link>
+        </TotalContainer>
+      }
       {cartItems.length > 0 &&
         <TotalContainer>
           <span>Subtotal: ${total}</span>
-          { isLoggedIn &&
+          {isLoggedIn &&
             <Link to='/Checkout'>
-              <Button onClick={() => backToCart(false)} buttonText="Checkout" color={greenButtonColor} data-testId="checkout-button"/>
+              <Button onClick={() => backToCart(false)} buttonText="Checkout" color={greenButtonColor} data-testId="checkout-button" />
             </Link>
           }
-          { !isLoggedIn &&
+          {!isLoggedIn &&
             <Link to='/Login'>
-              <Button onClick={() => backToCart(true)} buttonText="Login to proceed to checkout" color={greenButtonColor} data-testId="checkout-button" /> 
+              <Button onClick={() => backToCart(true)} buttonText="Login to proceed to checkout" color={greenButtonColor} data-testId="checkout-button" />
             </Link>
           }
         </TotalContainer>
