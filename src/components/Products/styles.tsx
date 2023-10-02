@@ -15,7 +15,7 @@ const Filter = styled.div`
   display: flex;
   justify-content: space-around;
 
-  @media (max-width: 650px) {
+  @media (max-width: 720px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -41,6 +41,10 @@ const ProductCardContainer = styled.div`
     width: 35%;
     height: auto;
   };
+
+  @media (max-width: 720px) {
+    width: 80%;
+  }
 `
 
 const ProductInfo = styled.div`
@@ -64,7 +68,7 @@ const LinkContainer = styled.div`
   gap: 10px;
   padding-top: 1em;
 
-  @media (max-width: 650px) {
+  @media (max-width: 720px) {
     gap: 5px;
   }
 `
