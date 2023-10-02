@@ -64,10 +64,6 @@ const TotalContainer = styled.div`
 
   @media (max-width: 540px) {
     width: 80%;
-    font-size: 14px;
-    button {
-      font-size: 14px;
-    }
   }
 `
 
@@ -100,9 +96,6 @@ const CartItemContainer = styled.li`
       display: flex;
       justify-content: center;
       align-self: center;
-      span {
-        font-size: 14px;
-      }
     }
     div:first-child {
       width: 70%;

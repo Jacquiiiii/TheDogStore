@@ -24,15 +24,6 @@ const MemberCard = styled.div`
   span {
     font-weight: bold;
     margin-bottom: 1em;
-
-    @media (max-width: 540px) {
-      font-size: 14px;
-    }
-  }
-  p {
-    @media (max-width: 540px) {
-      font-size: 12px;
-    }
   }
 `
 
@@ -57,9 +48,6 @@ const Coupons = styled.div`
     h3 {
       margin: 0;
       font-size: 20px;
-    }
-    span {
-      font-size: 13px;
     }
   }
 `

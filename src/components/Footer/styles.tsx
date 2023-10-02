@@ -10,20 +10,30 @@ const FooterContainer = styled.header`
   color: whitesmoke;
   background: #393e46;
   padding: 1.5em 1em;
-
-  @media (max-width: 768px) {
-    font-size: 12px;
+  div {
+    display: flex;
   }
 
-  @media (max-width: 665px) {
+  @media (max-width: 714px) {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
-    gap: 20px;
+    gap: 10px;
     span {
       text-align: center;
-      font-size: 11px;
+      font-size: 12px;
+    }
+    div {
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 871px) {
+    gap: 25px;
+    padding: 1em 0.5em;
+    span {
+      text-align: center;
+      font-size: 14px;
     }
   }
 `
@@ -37,13 +47,12 @@ const InfoContainer = styled.div`
   @media (max-width: 665px) {
     justify-content: center;
     align-items: center;
-    font-size: 12px;
   }
 `
 
 const FooterLinks = styled.div`
   display: flex;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
   justify-content: center;
   font-family: arial;
@@ -56,12 +65,6 @@ const FooterLinks = styled.div`
     padding: 0;
     font-size: 16px;
   }
-
-  @media (max-width: 768px) {
-    button {
-      font-size: 14px;
-    }
-  }
 `
 
 const NavLink = styled(Link)`
@@ -72,10 +75,6 @@ const NavLink = styled(Link)`
   text-align: center;
   font-family: arial;
   border-radius: 0.25em;
-
-  @media (max-width: 768px) {
-    font-size: 14px;
-  }
 `
 
 const ContactInfo = styled.div`

@@ -16,11 +16,8 @@ const Header = () => {
       </NavLink>
       <div>
         <NavLink to="/AllProducts" data-cy="shop-link">Shop</NavLink>
-        <NavLink to="/Cart" data-cy="cart-link">Cart ({cartItems.length})</NavLink>
-        {!isLoggedIn && 
-          <NavLink to="/Login" data-cy="login-link">Login</NavLink>
-        }
-        {isLoggedIn &&
+        {!isLoggedIn ?
+          <NavLink to="/Login" data-cy="login-link">Login</NavLink> :
           <>
             <NavLink to="/">
               <button onClick={handleLogout} data-cy="logout-button">Logout</button>
@@ -28,6 +25,7 @@ const Header = () => {
             <NavLink to="/Rewards" data-cy="rewards-link">Rewards</NavLink>
           </>
         }
+        <NavLink to="/Cart" data-cy="cart-link">Cart ({cartItems.length})</NavLink>
       </div>
     </HeaderContainer>
   )

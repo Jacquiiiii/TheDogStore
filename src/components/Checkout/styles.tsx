@@ -20,12 +20,6 @@ const CheckoutContainer = styled.div`
   h4 {
     margin: 1em 0 0 0;
   }
-
-  @media (max-width: 540px) {
-    input {
-      font-size: 12px;
-    }
-  }
 `
 
 const SideBySide = styled.div`

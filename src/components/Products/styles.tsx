@@ -9,23 +9,22 @@ const ProductsContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
-`
 
-const Filter = styled.div`
-  display: flex;
-  justify-content: space-around;
-
-  @media (max-width: 720px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  @media (max-width: 777px) {
+    padding: 1em 0;
   }
 `
 
-const Header = styled.h2`
-  align-self: center;
-  padding-top: 0.5em;
-  margin: 0;
+const FilterContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2em;
+
+  @media (max-width: 777px) {
+    flex-direction: column;
+    gap: 30px;
+  }
 `
 
 const ProductCardContainer = styled.div`
@@ -65,12 +64,6 @@ const LinkContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding-top: 1em;
-
-  @media (max-width: 720px) {
-    gap: 5px;
-  }
 `
 
 const NavLink = styled(Link)`
@@ -78,15 +71,31 @@ const NavLink = styled(Link)`
   padding: 0.5em;
   font-weight: bold;
   color: #232b2b;
-  font-size: 17px;
-  text-decoration: underline;
+  font-size: 16px;
   &: hover {
-    color: #505050;
+    text-decoration: underline;
   };
+`
 
-  @media (max-width: 540px) {
-    font-size: 13px;
+const SearchBar = styled.div`
+  display: flex;
+  gap: 10px;
+  input {
+    padding: 1em;
+    border: none;
+    border-radius: 0.25em;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.5);
+    outline: none;
+    width: 300px;
+
+    @media (max-width: 777px) {
+      width: 160px;
+    }
+  }
+  button {
+    border: none;
+    border-radius: 1em;
   }
 `
 
-export { ProductsContainer, Header, ProductCardContainer, ProductInfo, LinkContainer, NavLink, Filter }
+export { ProductsContainer, ProductCardContainer, ProductInfo, LinkContainer, NavLink, FilterContainer, SearchBar }

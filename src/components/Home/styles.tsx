@@ -56,6 +56,8 @@ const RightSide = styled.div`
     margin-bottom: 50px;
     div {
       height: 100%;
+      margin-bottom: 1.5em;
+      width: 85%;
     }
   }
 `

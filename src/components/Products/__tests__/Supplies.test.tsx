@@ -71,23 +71,4 @@ describe('Supplies', () => {
 
     expect(screen.getByTestId('no-products')).toBeInTheDocument()
   })
-
-  it('displays header "Supplies"', () => {
-    (useGetProductsByCategoryQuery as jest.Mock).mockReturnValue({
-      data: suppliesData,
-      error: undefined,
-      isLoading: false
-    })
-
-    render(
-      <BrowserRouter>
-        <Provider store={store}>
-          <Supplies />
-        </Provider>
-      </BrowserRouter>
-    )
-
-    const header = screen.getByRole('heading', { name: 'Supplies' })
-    expect(header).toBeInTheDocument()
-  })
 })

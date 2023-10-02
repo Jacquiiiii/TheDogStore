@@ -71,23 +71,4 @@ describe('Toys', () => {
       expect(screen.getAllByTestId('product-card-container')).toHaveLength(4)
     })
   })
-
-  it('displays header "Toys"', () => {
-    (useGetProductsByCategoryQuery as jest.Mock).mockReturnValue({
-      data: toysData,
-      error: undefined,
-      isLoading: false
-    })
-
-    render(
-      <BrowserRouter>
-        <Provider store={store}>
-          <Toys />
-        </Provider>
-      </BrowserRouter>
-    )
-
-    const header = screen.getByRole('heading', { name: 'Toys' })
-    expect(header).toBeInTheDocument()
-  })
 })

@@ -1,9 +1,9 @@
 import useProductsByCategory from '../../hooks/useProductsByCategory'
 import { Product } from '../../types/types'
-import { ProductsContainer, Header, Filter } from './styles'
+import { ProductsContainer } from './styles'
 
 import ProductCard from './ProductCard'
-import ProductLinks from './ProductLinks'
+import Filter from './Filter'
 
 const Supplies = () => {
   const { productsData, data: products, error, isLoading } = useProductsByCategory('Supplies')
@@ -26,10 +26,7 @@ const Supplies = () => {
 
   return (
     <>
-      <Filter>
-        <Header>Supplies</Header>
-        <ProductLinks />
-      </Filter>
+      <Filter />
       <ProductsContainer data-testid="products-container">
         {productsData &&
           products.productsByCategory.map((product: Product) => (
