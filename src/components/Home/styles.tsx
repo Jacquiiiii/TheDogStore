@@ -38,7 +38,7 @@ const RightSide = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 100%;
   height: 100%;
   div {
     display: flex;
@@ -47,6 +47,13 @@ const RightSide = styled.div`
     justify-content: center;
     width: 75%;
     height: 100vh;
+    p {
+      width: 40%;
+    }
+  img {
+    border-radius: 1em;
+    width: 40%;
+  }
   }
 
   @media (max-width: 650px) {
@@ -78,31 +85,31 @@ const ProductLink = styled(Link)`
   width: 50%;
 `
 
-const LeftSide = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  height: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  div {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-      position: absolute;
-      width: 90%;
-      border-radius: 0.5em;
-      height: auto;
-    }
-  }
+// const LeftSide = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 50%;
+//   height: 100%;
+//   position: sticky;
+//   top: 0;
+//   z-index: 1;
+//   div {
+//     height: 100vh;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     img {
+//       position: absolute;
+//       width: 90%;
+//       border-radius: 0.5em;
+//       height: auto;
+//     }
+//   }
 
-  @media (max-width: 650px) {
-    display: none;
-  }
-`
+//   @media (max-width: 650px) {
+//     display: none;
+//   }
+// `
 
-export { HomeContainer, ScrollWrapper, LeftSide, RightSide, Banner, ProductLink }
+export { HomeContainer, ScrollWrapper, RightSide, Banner, ProductLink }
