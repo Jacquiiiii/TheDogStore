@@ -9,7 +9,7 @@ const Checkout = () => {
 
   return (
     <CheckoutContainer>
-      <h4>Personal Information</h4>
+      <h4>Shipping Details</h4>
       <SideBySide>
         <input placeholder="First name" />
         <input placeholder="Last name" />
@@ -22,7 +22,7 @@ const Checkout = () => {
         <input placeholder="City" />
         <input placeholder="Postal code" />
       </SideBySide>
-      <h4>Payment Information</h4>
+      <h4>Payment Details</h4>
       <SideBySide>
         <input placeholder="Credit card number" />
         <input placeholder="Expiry" />

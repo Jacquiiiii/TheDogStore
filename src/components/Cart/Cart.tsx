@@ -37,7 +37,7 @@ const Cart = () => {
       }
       {cartItems.length > 0 &&
         <TotalContainer>
-          <span>Subtotal: ${total}</span>
+          <span>Total: ${total}</span>
           {isLoggedIn &&
             <Link to='/Checkout'>
               <Button onClick={() => backToCart(false)} buttonText="Checkout" color={greenButtonColor} data-testId="checkout-button" />

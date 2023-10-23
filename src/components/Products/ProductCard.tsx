@@ -16,7 +16,7 @@ const ProductCard = (props: ProductProps) => {
       <ProductInfo>
         <span>{product.brand}: {product.name}</span>
         <div>
-          <span data-testid="product-card-price">${product.price}</span>
+          <span data-testid="product-card-price">${product.price.toFixed(2)}</span>
           <Button buttonText="Add to cart" color={greenButtonColor} onClick={() => dispatch(addItemToCart(product))} />
         </div>
       </ProductInfo>

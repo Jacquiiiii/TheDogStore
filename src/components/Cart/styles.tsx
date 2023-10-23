@@ -13,6 +13,7 @@ const CartItemsList = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 10px;
   padding: 1em;
   width: 70%;
   border-radius: 0.25em;
@@ -86,6 +87,7 @@ const CartItemContainer = styled.li`
     border: none;
     background-color: transparent;
     cursor: pointer;
+    margin-left: 0.5em;
   }
   button:active {
     transform: scale(0.95);
@@ -98,7 +100,7 @@ const CartItemContainer = styled.li`
       align-self: center;
     }
     div:first-child {
-      width: 70%;
+      width: 60%;
     }
   }
 `

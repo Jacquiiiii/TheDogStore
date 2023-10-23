@@ -13,8 +13,8 @@ const CartItem = (props: ProductProps) => {
         <span>{product.brand}: {product.name} </span>
       </div>
       <div>
-        <span data-testid="cart-item-price">${product.price}</span>
-        <button onClick={() => dispatch(removeItemFromCart(product))}>❌</button>
+        <span data-testid="cart-item-price">${product.price.toFixed(2)}</span>
+        <button onClick={() => dispatch(removeItemFromCart(product))}>🗑️</button>
       </div>
     </CartItemContainer>
   )
