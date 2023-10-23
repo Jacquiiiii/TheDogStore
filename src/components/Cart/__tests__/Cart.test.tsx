@@ -41,7 +41,7 @@ describe('Cart', () => {
       { initialState }
     )
   
-    expect(screen.getByText('Subtotal: $68.41')).toBeInTheDocument()
+    expect(screen.getByText('Total: $68.41')).toBeInTheDocument()
   })
 
   it('renders a checkout button when there are items in the cart and user is logged in', () => {

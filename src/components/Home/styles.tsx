@@ -30,7 +30,7 @@ const Banner = styled.div`
 
 const ScrollWrapper = styled.div`
   display: flex;
-  height: 100%
+  height: 100%;
 `
 
 const RightSide = styled.div`
@@ -43,7 +43,7 @@ const RightSide = styled.div`
   div {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     width: 75%;
     height: 100vh;
@@ -72,7 +72,7 @@ const ProductLink = styled(Link)`
   background-color: #347474;
   padding: 1em;
   border-radius: 1em;
-  align-self: flex-start;
+  align-self: center;
   margin-top: 1em;
   font-weight: bold;
   width: 50%;
@@ -94,8 +94,8 @@ const LeftSide = styled.div`
     justify-content: center;
     img {
       position: absolute;
-      border-radius: 1em;
-      width: 80%;
+      width: 90%;
+      border-radius: 0.5em;
       height: auto;
     }
   }
